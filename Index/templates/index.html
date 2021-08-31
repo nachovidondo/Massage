@@ -1,19 +1,14 @@
-{% load static %}
 <!DOCTYPE HTML>
-
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
+{% load static %}
+
 
 <head>
     <title>Astral by HTML5 UP</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="{% static 'app1/css/main.css' %}" />
+    <noscript><link rel="stylesheet" href="{% static 'app1/css/noscript.css' %}" /></noscript>
 </head>
 
 <body class="is-preload">
@@ -23,9 +18,9 @@
 
         <!-- Nav -->
         <nav id="nav">
-            <a href="#" class="icon solid fa-home"><span>Home</span></a>
-            <a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-            <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+            <a href="#" class="{% static 'app1/icon solid fa-home' %}"><span>Home</span></a>
+            <a href="#work" class="{% static 'app1/icon solid fa-folder' %}"><span>Work</span></a>
+            <a href="#contact" class="{% static 'app1/icon solid fa-envelope' %}"><span>Contact</span></a>
             <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a>
         </nav>
 
@@ -40,7 +35,7 @@
                 </header>
                 <a href="#work" class="jumplink pic">
                     <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                    <img src="images/me.jpg" alt="" />
+                    <img src="{% static 'app1/images/me.jpg' %}" alt="" />
                 </a>
             </article>
 
@@ -55,7 +50,7 @@
                 <section>
                     <div class="row">
                         <div class="col-4 col-6-medium col-12-small">
-                            <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+                            <a href="#" class="image fit"><img src="{% static 'app1/images/pic01.jpg' %}" alt=""></a>
                         </div>
                         <div class="col-4 col-6-medium col-12-small">
                             <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
@@ -135,11 +130,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'app1/js/jquery.min.js' %}"></script>
+    <script src="{% static 'app1/js/browser.min.js' %}"></script>
+    <script src="{% static 'app1/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'app1/js/util.js' %}"></script>
+    <script src="{% static 'app1/js/main.js' %}"></script>
 
 </body>
 
