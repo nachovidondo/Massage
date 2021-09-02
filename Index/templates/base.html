@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+
+
+<head>
+    <title>Astral by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'app1/css/main.css' %}" />
+    <noscript><link rel="stylesheet" href="{% static 'app1/css/noscript.css' %}" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+        <!-- Nav -->
+        <nav id="nav">
+
+            <a href="{% url 'index' %}" class="icon solid fa-home"><span>Home</span></a>
+            <a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+            <a href="{% url 'contacto' %}" class="icon solid fa-envelope"><span>Contact</span></a>
+            <a href="#" <i class="fab fa-instagram"></i><span>Instagram</span></a>
+        </nav>{% block content %} {% endblock %}
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; Untitled.</li>
+                <li>Design by Ignacio Vidondo 2022</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'app1/js/jquery.min.js' %}"></script>
+    <script src="{% static 'app1/js/browser.min.js' %}"></script>
+    <script src="{% static 'app1/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'app1/js/util.js' %}"></script>
+    <script src="{% static 'app1/js/main.js' %}"></script>
+
+</body>
+
+</html>
