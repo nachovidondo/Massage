@@ -4,7 +4,7 @@
 
 
 <head>
-    <title>Astral by HTML5 UP</title>
+    <title></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{% static 'app1/css/main.css' %}" />
@@ -20,16 +20,20 @@
         <nav id="nav">
 
             <a href="{% url 'index' %}" class="icon solid fa-home"><span>Home</span></a>
-            <a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+            <a href="{% url 'about' %}" class="icon solid fa-folder"><span>Therapies</span></a>
             <a href="{% url 'contacto' %}" class="icon solid fa-envelope"><span>Contact</span></a>
             <a href="#" <i class="fab fa-instagram"></i><span>Instagram</span></a>
-        </nav>{% block content %} {% endblock %}
+
+            <a href="{% url 'about' %}" <i class="fas fa-book-reader"></i>
+                <span>About Us</span></a>
+        </nav>
+        {% block content %} {% endblock %}
 
         <!-- Footer -->
         <div id="footer">
             <ul class="copyright">
-                <li>&copy; Untitled.</li>
-                <li>Design by Ignacio Vidondo 2022</a>
+                <a>
+                    <li>&copy; Design by Ignacio Vidondo 2022</a>
                 </li>
             </ul>
         </div>

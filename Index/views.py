@@ -35,3 +35,16 @@ def contacto(request):
                 return redirect(reverse("contacto")+"?fail")
             
     return render (request, 'contact.html', {'form':contact_form })
+
+
+
+
+#About-Us
+def about(request):
+    about= Picture.objects.all()
+    return render (request,'about-us.html',{'about' : about})
+
+#Therapies
+def therapies(request):
+    therapies= Picture.objects.all()
+    return render (request,'therapies.html',{'therapies' : therapies}) 
