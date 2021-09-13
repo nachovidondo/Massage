@@ -28,7 +28,7 @@ def contacto(request):
                 )
             try:
                 mail.send() #Si esta todo ok redireccionar
-                return redirect(reverse("index")+"?ok")
+                return redirect(reverse("automatic")+"?ok")
                  
                  
             
