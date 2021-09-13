@@ -5,6 +5,7 @@ from django.shortcuts import render,reverse , redirect
 from .forms  import Contactform
 from django.core.mail import EmailMessage
 
+
 #Index
 def index(request):
     index= Picture.objects.all()
@@ -20,14 +21,14 @@ def contacto(request):
             email= request.POST.get('email')
             content= request.POST.get('content')
             mail = EmailMessage(
-                "Circulo Inmobiliario : Nuevo Mensaje de Contacto ",
+                "Prana Massage : Nuevo Mensaje de Contacto ",
                 "De {} {}\n\nEscribio:\n\n {}".format(name ,email,content),
-                "circuloin.com", ["info@circuloin.com"],
+                "circuloin.com", ["ignaciovidondo@hotmail.com"],
                 reply_to = [email]
                 )
             try:
                 mail.send() #Si esta todo ok redireccionar
-                return redirect(reverse("automatic")+"?ok")
+                return redirect(reverse("index")+"?ok")
                  
                  
             
@@ -36,8 +37,9 @@ def contacto(request):
             
     return render (request, 'contact.html', {'form':contact_form })
 
-
-
+#Automatic message after contact us
+def automatic(request):
+    return render (request, 'automatic.html') 
 
 #About-Us
 def about(request):
