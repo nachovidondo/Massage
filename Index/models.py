@@ -12,7 +12,7 @@ class Picture(models.Model):
         verbose_name_plural="Foto"
         
     def __str__(self):
-        return self.name
+        return self.description
     
 
 class Therapist (models.Model):
@@ -26,7 +26,7 @@ class Therapist (models.Model):
         verbose_name_plural = "Terapeutas"
     
     def __str__(self):
-        self.name
+       return  self.name
         
         
 class Therapy(models.Model):

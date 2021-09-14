@@ -3,21 +3,23 @@
 
     <article id="work" class="panel">
         <header>
-            <h2>Therapies </h2>
+            <h2>Our Therapist </h2>
         </header>
-        {% for therapy in therapies %}
+        {% for therapi in therapist %}
         <p>
-            {{therapy.name}}
+            {{therapi.name}}
         </p>
+        <p>{{therapi.subtitle}}</p>
         <section>
             <div class="row">
 
                 <div class="col-2 col-6-medium col-12-small">
-                    <img src="{{therapy.image.url}}" alt="First slide" height="700" width="500">
-                    <h3> {{therapy.description}}</h3>
+                    <img src="{{therapi.image.url}}" alt="First slide" height="700" width="500">
+                    <h3> {{therapi.description}}</h3>
                 </div>
-                <div>
-                    <span>$ {{therapy.price}} DKK</span> </div>
+
+
+
             </div>
         </section>
         {% endfor %}

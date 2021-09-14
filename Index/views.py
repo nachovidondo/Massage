@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import Picture
+from .models import Picture, Therapist, Therapy
 from django.shortcuts import render,reverse , redirect
 from .forms  import Contactform
 from django.core.mail import EmailMessage
@@ -48,5 +48,10 @@ def about(request):
 
 #Therapies
 def therapies(request):
-    therapies= Picture.objects.all()
-    return render (request,'therapies.html',{'therapies' : therapies}) 
+    therapies= Therapy.objects.all()
+    return render (request,'therapies.html',{'therapies' : therapies }) 
+
+#Therapist
+def therapist(request):
+    therapist= Therapist.objects.all()
+    return render (request,'therapist.html',{'therapist' : therapist }) 

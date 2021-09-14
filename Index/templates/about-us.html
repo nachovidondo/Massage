@@ -7,9 +7,12 @@
             <h1>About Us</h1>
             <p>We are ready to take care you!</p>
         </header>
-        <a href="#work" class="jumplink pic">
-            <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+
+        <a href="{% url 'therapist' %}" class="jumplink pic">
+
+
             <img src="{% static 'app1/images/me.jpg' %}" alt="" />
+            <button style='font-size:24px'>Our Therapist <i class='fas fa-users'></i>
         </a>
     </article>
 
